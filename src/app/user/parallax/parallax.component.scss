@@ -1,0 +1,49 @@
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("src/assets/parallax1.jpg");
+    /* Set a specific height */
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+}
+
+.cms-type-3-btn {
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.cms-type-3-btn :hover {
+    background-color: #f4b323;
+    .btn {
+        color: black;
+    }
+}
+
+.grid__item {
+    float: left;
+    margin-left: 20px;
+    min-height: 1px;
+    vertical-align: top;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

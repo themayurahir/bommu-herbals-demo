@@ -1,0 +1,90 @@
+.breadcrumbHeader {
+    padding: 30px 40px;
+    background: #f4f4f4;
+}
+.carousel-inner .carousel-item {
+    height: 630px;
+}
+
+.body{
+    overflow: hidden;
+}
+
+.slide{
+    margin-top: 5%;
+    width: 80%;
+    height: 400px;
+}
+
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+}
+
+.details{
+    margin-top: 5%;
+    .title{
+        font-size:xx-large;
+        font-size: 48px;
+        letter-spacing: 0.1em;
+        font-family: SpicyRice;
+        color: #9f4103;
+        margin-bottom: 5%;
+    }
+    .label{
+        font-weight: 900;
+    }
+    td{
+        padding: 15px;  
+    }
+    .quantity {
+        padding-top: 15px;
+        // margin-right: 60px;
+    }
+
+    .quantity input {
+        -webkit-appearance: none;
+        border: none;
+        text-align: center;
+        width: 32px;
+        font-size: 16px;
+        color: black;
+        font-weight: 300;
+    }
+    .quantity button{
+        color:black;
+        border:2px solid #9f4103;
+        border-radius:30px;
+        background-color: transparent;
+    }
+    .quantity button:hover{
+        background-color: #f4b323;
+    }
+    .price{
+        font-size: 24px;
+        font-weight: bold;
+        color: #f4b323;
+    }
+}
+.cms-type-3-btn :hover {
+    background-color: #f4b323;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:#f4b323;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    color:#f4b323 !important;
+    background-color:#f4b323 !important;
+}
+
+.customer-reviews-title{
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-family: SpicyRice;
+    margin-top: 1%;
+}
+

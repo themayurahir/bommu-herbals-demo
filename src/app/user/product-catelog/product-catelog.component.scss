@@ -1,0 +1,24 @@
+.product-catelog-header{
+    .cateogry-name {
+        font-family: SpicyRice;
+        color: #000000;
+        width: 100%;
+        font-size: 28px;
+    }
+    .cateogry-path {
+        color: #000000;
+        text-align: center;
+        float: left;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 18px;
+        a{
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
+.catelog-container {
+    width: 100%;
+    height: 100%;
+}

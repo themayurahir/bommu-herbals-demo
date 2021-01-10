@@ -1,0 +1,28 @@
+<nav aria-label="breadcrumb">
+    <div class="breadcrumbHeader d-flex justify-content-center">
+        <div>
+            <h1 style="font-family: SpicyRice; color: #9f4103;" class="text-center">Track Order</h1>
+            <ol class="breadcrumb text-center">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Track your Order</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center fs-1 mb-5">Track Your Order</h5>
+        <h6 class="card-subtitle mb-2 text-center fs-4">{{orderStatus? 'Your order is in ' + orderStatus + '.': ''}}</h6>
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Order Number</mat-label>
+            <input matInput type="text" name="orderNumber" [(ngModel)]="orderNumber">
+        </mat-form-field>
+        <button class="btn mx-2 mt-3" (click)="getOrderStatus()">
+            Submit
+        </button>
+        <button class="btn mx-2 mt-3" routerLink='/'>
+            Back
+        </button>
+    </div>
+</div>

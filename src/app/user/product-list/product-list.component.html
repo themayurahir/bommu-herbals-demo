@@ -1,0 +1,59 @@
+<nav aria-label="breadcrumb">
+    <div class="breadcrumbHeader d-flex justify-content-center">
+        <div>
+            <h1 style="font-family: SpicyRice;color: #9f4103;" class="text-center">{{subCategory? subCategory : category}}</h1>
+            <ol class="breadcrumb text-center">
+                <li class="breadcrumb-item" routerLink="/">Home</li>
+                <li class="breadcrumb-item active" aria-current="page" routerLink="/products/{{routeCategory}}">{{category? category : ''}}</li>
+                <li class="breadcrumb-item active" aria-current="page" *ngIf="subCategory">{{subCategory? subCategory : ''}}</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+<div class="row mt-4">
+    <div class="d-flex justify-content-center col-sm-6 col-md-3 col-xs-12 col-12 mb-4"
+        *ngFor="let image of images; index as i">
+        <div class="card d-flex flex-column" style="width: 18rem;">
+            <div class="card-overlay">
+                <img [src]="image.src" class="card-img-top image" alt="">
+                <div class="ImageWrapper">
+                    <div class="product-button">
+                        <a title="Add to Cart" class="add-cart-btn" (click)="addToCart(image)">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a title="quick-view" (click)="quickView(image)" class="quick-view">
+                            <i class="far fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="line line-top">
+                <span></span>
+            </div>
+            <div class="line line-right">
+                <span></span>
+            </div>
+            <div class="line line-bottom">
+                <span></span>
+            </div>
+            <div class="line line-left">
+                <span></span>
+            </div>
+            <p class="product-right-tag" *ngIf="image.savePercent">Save <br> <b>{{image.savePercent}}%</b></p>
+            <p class="product-left-tag" *ngIf="image.savePercent">sale</p>
+            <div class="card-body">
+                <h5 class="card-title text-center productTitle" [routerLink]="image.link">{{image.title}}</h5>
+                <p class="card-text text-center">{{image.effectivePrice ? '&#x20B9; ' + image.effectivePrice : image.originalPrice}}</p>
+                <p class="card-text text-center"><del>{{image.originalPrice ? '&#x20B9; ' + image.originalPrice : ''}}</del></p>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary align-self-end mx-auto w-100" routerLink="/products/{{routeCategory}}/{{routeSubCategory}}/{{image.id}}">View</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary align-self-end mx-auto w-100" (click)="addToCart(image)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

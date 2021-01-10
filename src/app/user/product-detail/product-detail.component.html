@@ -1,0 +1,93 @@
+<div class="body">
+    <nav aria-label="breadcrumb">
+        <div class="breadcrumbHeader d-flex justify-content-center">
+            <div>
+                <h1 style="font-family: SpicyRice; color: #9f4103;" class="text-center">{{title}}</h1>
+                <ol class="breadcrumb text-center">
+                    <li class="breadcrumb-item" routerLink="/">Home</li>
+                    <li class="breadcrumb-item active" aria-current="page" routerLink="/products/{{routeCategory}}">{{category}}</li>
+                    <li class="breadcrumb-item active" aria-current="page" routerLink="/products/{{routeSubCategory}}">{{subCategory}}</li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-6 d-flex justify-content-center">
+            <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner" id="carouselExampleDark" >
+                    <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let slide of images;
+                    index as i;first as isFirst">
+                    <img [src]="slide" class="d-block w-100 carousel-img" alt="...">
+                        <!-- <div class="carousel-caption">
+                            <h1 id="captionHeading" class="animate__animated animate__fadeInDownBig">{{slide.heading}}</h1>
+                            <p id="captionSubHeading1" class="animate__animated animate__fadeInDownBig">{{slide.subHeadingOne}}</p>
+                            <p id="captionSubHeading2" class="animate__animated animate__fadeInDownBig">{{slide.subHeadingTwo}}</p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="details">
+                <p class="title">
+                    {{title}}
+                </p>
+                <p>
+                    {{description}}
+                </p>
+                <table>
+                    <tr class="tr">
+                        <td class="label">Effective Price :</td>
+                      <td class="price">{{effectivePrice ? '&#x20B9; ' + effectivePrice : originalPrice}}</td>
+                      <td class="price" style="font-size: 18px; color: grey;"><del>{{originalPrice ? '&#x20B9; ' + originalPrice : ''}}</del></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Quantity :</td>
+                        <td>
+                        <div class="quantity">
+                            <button class="plus-btn" type="button" style=" padding-right: 8px;
+                                padding-left: 8px;" name="button" (click)="minusBtn()">
+                              -
+                            </button>
+                            <input type="text" name="quantity" (change)="onChangeQuantity()" [(ngModel)]="quantity">
+                            <button class="minus-btn" type="button" name="button" (click)="plusBtn()">
+                              +
+                            </button>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Subtotal :</td>
+                        <td class="price">&#x20B9; {{subtotal}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cms-type-3-btn">
+                <button style="color:black;border:2px solid #9f4103;border-radius:30px;" class="btn mx-2" (click)="addToCart()">
+                    <i class="fas fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <mat-tab-group mat-align-tabs="center" class="mt-2">
+        <mat-tab label="Product Description"> {{description}} </mat-tab>
+        <mat-tab label="Reviews">
+            <p class="customer-reviews-title">{{customerReviews}}</p>
+        </mat-tab>
+        <mat-tab label="Shipping Details"> {{delivery}} </mat-tab>
+      </mat-tab-group>
+      <app-products [pageTitle]="relatedProducts" [url]="relatedProductsUrl"></app-products>
+</div>

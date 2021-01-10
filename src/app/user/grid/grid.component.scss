@@ -1,0 +1,71 @@
+.grid{
+  min-height: 25rem;
+   img{
+    width: 100%;
+    min-height: 100%;
+  }
+  .col-sm-8{
+    position: relative;
+  }
+  .col-sm-4{
+    position: relative;
+  }
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .content { 
+    position: relative; 
+} 
+  
+.overlay { 
+    position: absolute; 
+    transition: all 0.3s ease; 
+    opacity: 0; 
+    background-color: rgba(0, 0, 0, 0.699); 
+} 
+  
+.content:hover .overlay { 
+    opacity: 1; 
+} 
+  
+.overlayLeft{ 
+    height: 100%; 
+    width: 0; 
+    top: 0; 
+    background-color:  rgba(0, 0, 0, 0.699);; 
+} 
+  
+.content:hover .overlayLeft{ 
+  width: 96%; 
+} 
+  .main-block{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .title-grid{
+    font-family: SpicyRice;
+  }
+  .btn{
+    color:white;
+    border:2px solid #9f4103;
+    border-radius:30px;
+  }
+  .btn:hover {
+    background-color: #f4b323;
+    color: black;
+  }
+}

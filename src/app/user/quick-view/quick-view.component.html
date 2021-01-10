@@ -1,0 +1,50 @@
+<a class="closeIcon" [mat-dialog-close]="true"> <i class="fas fa-times"></i></a>
+<div class="row">
+    <div class="col-sm-6 d-flex justify-content-center">
+       <img [src]="image">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <p class="title">
+                {{title}}
+            </p>
+            <p>
+                {{description}}
+            </p>
+            <table>
+                <tr class="tr">
+                    <td class="label">Effective Price :</td>
+                    <td class="price">{{effectivePrice ? '&#x20B9; ' + effectivePrice : originalPrice}}</td>
+                  <td class="price" style="font-size: 18px; color: grey;"><del>{{originalPrice ? '&#x20B9; ' + originalPrice : ''}}</del></td>
+
+                </tr>
+                <tr>
+                    <td class="label">Quantity :</td>
+                    <td>
+                        <div class="quantity">
+                            <button class="plus-btn" style=" padding-right: 8px;
+                            padding-left: 8px;" type="button" name="button" (click)="minusBtn()">
+                              -
+                            </button>
+                            <input type="text" name="quantity" (change)="onChangeQuantity()" [(ngModel)]="quantity">
+                            <button class="minus-btn" type="button" name="button" (click)="plusBtn()">
+                              +
+                            </button>
+                          </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Subtotal :</td>
+                    <td class="price">&#x20B9; {{total}}</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="cms-type-3-btn">
+            <button style="color:black;border:2px solid #9f4103;border-radius:30px;" class="btn mx-2">
+                <i class="fas fa-cart-plus"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>

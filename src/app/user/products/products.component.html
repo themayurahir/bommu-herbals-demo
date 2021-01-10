@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="product-header text-center row d-flex align-items-center">
+    <h2 class="top-product-heading">{{pageTitle}}</h2>
+  </div>
+  <div>
+    <owl-carousel-o [options]="customOptions" class="d-flex justify-content-center">
+      <ng-container *ngFor="let image of images; index as i">
+        <ng-template carouselSlide>
+          <div class="card d-flex flex-column" style="width: 18rem;">
+            <div class="line line-top">
+              <span></span>
+            </div>
+            <div class="line line-right">
+              <span></span>
+            </div>
+            <div class="line line-bottom">
+              <span></span>
+            </div>
+            <div class="line line-left">
+              <span></span>
+            </div>
+            <img [src]="image.src" class="card-img-top" alt="" style="height: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title text-center productTitle">{{image.title}}</h5>
+              <p class="card-text text-center">{{image.effectivePrice ? 'Rs. ' + image.effectivePrice : image.originalPrice}}</p>
+              <p class="text-center"><del>{{image.originalPrice ? 'Rs. ' + image.originalPrice : ''}}</del></p>
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                  <button class="btn btn-primary align-self-end mx-auto w-100">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>

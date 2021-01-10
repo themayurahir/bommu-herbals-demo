@@ -1,0 +1,26 @@
+.footer {
+    font-family: Roboto;
+    background: url('src/assets/footer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+    font-size: larger;
+    ul{
+        list-style-type:none
+    }
+}
+
+h3 {
+    font-family: SpicyRice;
+    letter-spacing: 1px;
+    color: #f4b323;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    margin-top: 4%;
+}
+li{
+    display: flex;
+    justify-content: center;
+}

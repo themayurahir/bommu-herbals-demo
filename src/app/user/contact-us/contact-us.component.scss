@@ -1,0 +1,76 @@
+.breadcrumbHeader {
+    padding: 30px 40px;
+    background: #f4f4f4;
+}
+.details{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    font-size: medium;
+
+}
+.icon{
+    background: #292929;
+    color: white;
+    border-radius: 50%;
+    line-height: 50px;
+    margin-left: 40%;
+    width: 20%;
+    margin-top: 5%;
+}
+
+.icon:hover{
+    background-color: #f4b323;
+}
+
+.card{
+    height: 100%;
+    border-color: transparent;
+}
+
+.card-title{
+    font-size: larger;
+    font-weight: 600;
+    font-family: SpicyRice;
+    letter-spacing: 2px;
+}
+
+.message{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+.form{
+    width: 100%;
+}
+
+.sendBtn{
+    color:white;
+    background-color:#9f4103;
+    border-radius:30px;
+    width: 100%;
+    height: 3rem;
+  }
+  .sendBtn:hover {
+    background-color: #f4b323;
+}
+
+@media only screen and (max-width: 600px) {
+    .details{
+       margin-left: -3%;
+       display: flex;
+       justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .details{
+       margin-left: 10%;
+       display: flex;
+       justify-content: center;
+    }
+}

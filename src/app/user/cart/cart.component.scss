@@ -1,0 +1,86 @@
+.breadcrumbHeader {
+  padding: 30px 40px;
+  background: #f4f4f4;
+}
+
+.cart {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  .header {
+    background: #212529;
+    color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+  }
+
+  .row {
+    margin-bottom: 2%;
+  }
+
+  .quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: black;
+    font-weight: 300;
+  }
+  .quantity button{
+    color:black;
+    border:2px solid #9f4103;
+    border-radius:30px;
+    background-color: transparent;
+}
+.quantity button:hover{
+    background-color: #f4b323;
+}
+
+  .cart-Total {
+    margin-top: 10%;
+
+    .allTitles {
+      font-family: SpicyRice;
+      color: #9f4103;
+      font-size: 32px;
+    }
+
+    .totalMoney {
+      font-family: SpicyRice;
+      color: #222121;
+      font-size: 32px;
+    }
+  }
+
+  .proceedBtn {
+    color: black;
+    border: 2px solid #9f4103;
+    border-radius: 30px;
+  }
+
+  .proceedBtn:hover {
+    background-color: #f4b323;
+  }
+
+  textarea{
+    width: 300px; 
+    height: 95px 
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cart {
+    .quantity {
+      width: 100%;
+    }
+
+    .cart-Total {
+      .allTitles {
+        font-size: 25px;
+      }
+    }
+  }
+}

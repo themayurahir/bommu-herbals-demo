@@ -1,0 +1,56 @@
+.carousel-inner .carousel-item {
+    height: 630px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 630px;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#captionHeading {
+    --animate-duration: 2s;
+    font-size: 58px;
+    letter-spacing: 0.1em;
+    font-family: SpicyRice;
+}
+
+#captionSubHeading1 {
+    --animate-duration: 2.2s;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    color: #f4b323;
+    display: inline-block;
+    border-top: 3px solid #f4b323;
+    border-bottom: 3px solid #f4b323;
+    padding: 2%;
+    margin-top: 1%;
+}
+
+#captionSubHeading2 {
+    --animate-duration: 2.3s;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    #captionHeading{
+        font-size: 40px;
+    }
+    #captionSubHeading1{
+        font-size: 22px;
+    }
+    #captionSubHeading2{
+        font-size: 14px;
+    }
+  }

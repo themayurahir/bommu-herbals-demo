@@ -1,0 +1,39 @@
+.breadcrumbHeader {
+    padding: 30px 40px;
+    background: #f4f4f4;
+}
+.body{
+    overflow: hidden;
+}
+.row{
+    margin: 2%;
+}
+.billing-details{
+    .form{
+        width: 100%;
+    }
+}
+.header{
+    background-color: grey;
+    margin-bottom: 1%;
+}
+
+.productDetails{
+    background-color: #928d8d;
+}
+
+.col-6{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.proceedBtn {
+  color: black;
+  border: 2px solid #9f4103;
+  border-radius: 30px;
+  float: right;
+}
+
+.proceedBtn:hover {
+  background-color: #f4b323;
+}

@@ -1,0 +1,86 @@
+<nav aria-label="breadcrumb">
+    <div class="breadcrumbHeader d-flex justify-content-center">
+        <div>
+            <h1 style="font-family: SpicyRice; color: #9f4103;" class="text-center">Cart Page</h1>
+            <ol class="breadcrumb text-center">
+                <li class="breadcrumb-item" routerLink="/">Home</li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<div class="cart">
+    <div class="row text-center d-flex align-items-center header">
+        <div class="col">
+            <p>Image</p>
+        </div>
+        <div class="col">
+            <p>Product</p>
+        </div>
+        <div class="col">
+            <p>Price</p>
+        </div>
+        <div class="col">
+            <p>Quantity</p>
+        </div>
+        <div class="col">
+            <p>Total</p>
+        </div>
+        <div class="col">
+            <p>Remove</p>
+        </div>
+    </div>
+
+    <div class="row text-center d-flex align-items-center" *ngFor="let product of products;index as i;">
+        <div class="col">
+            <img [src]='product.image' style="height: 100px; width: 200px;" />
+        </div>
+        <div class="col">
+            <p>{{product.title}}</p>
+        </div>
+        <div class="col">
+            <p>{{product.price}}</p>
+        </div>
+        <div class="col">
+            <div class="quantity">
+                <button class="plus-btn" type="button" name="button" (click)="minusBtn(product)">
+                    -
+                </button>
+                <input type="text" name="quantity" (change)="onChangeQuantity()" [(ngModel)]="product.quantity">
+                <button class="minus-btn" type="button" name="button" (click)="plusBtn(product)">
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <p>{{product.total}}</p>
+        </div>
+        <div class="col" (click)="removeProduct(i)">
+            <i class="fas fa-trash"></i>
+        </div>
+    </div>
+    <div class="cart-Total">
+        <div class="row">
+            <!-- <div class="col-sm-10 d-flex justify-content-between">
+                <div>
+                    <p class="allTitles">Special instructions for seller</p>
+                    <textarea [(ngModel)]="instructions"
+                        placeholder="Enter your Instructions"></textarea>
+                </div>
+            </div> -->
+            <div class="col-sm-12 d-flex justify-content-end">
+                <div>
+                    <div>
+                        <p class="allTitles">Total :- <span class="totalMoney">&#x20B9; {{TotalMoney}}</span></p>
+                    </div>
+                    <div>
+                        <button routerLink="/checkout" class="btn mx-2 mt-3 proceedBtn">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

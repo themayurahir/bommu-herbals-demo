@@ -1,0 +1,103 @@
+.closeIcon {
+    float: right;
+    top: 0px;
+    font-size: large;
+    color: black;
+}
+
+img {
+    height: 100%;
+}
+
+.details {
+    margin-top: 5%;
+
+    .title {
+        font-size: 48px;
+        letter-spacing: 0.1em;
+        font-family: SpicyRice;
+        color: #9f4103;
+        margin-bottom: 5%;
+    }
+
+    .label {
+        font-weight: 900;
+    }
+
+    td {
+        padding: 15px;
+    }
+
+    .quantity {
+        padding-top: 20px;
+        margin-right: 60px;
+    }
+
+    .quantity input {
+        -webkit-appearance: none;
+        border: none;
+        text-align: center;
+        width: 32px;
+        font-size: 16px;
+        color: black;
+        font-weight: 300;
+    }
+
+    .quantity button{
+        color:black;
+        border:2px solid #9f4103;
+        border-radius:30px;
+        background-color: transparent;
+    }
+    .quantity button:hover{
+        background-color: #f4b323;
+    }
+
+    .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #f4b323;
+    }
+
+    .weight {
+        border: 2px solid #f4b323;
+        padding: 0 15px;
+        margin: 0 0px 3px 0;
+        line-height: 35px;
+        cursor: pointer;
+        font-weight: bold !important;
+        color: #000;
+    }
+
+    .avaiability {
+        color: #f4b323;
+    }
+}
+
+.cms-type-3-btn :hover {
+    background-color: #f4b323;
+}
+
+@media only screen and (max-width: 600px) {
+    .closeIcon {
+        float: right;
+        top: 0px;
+        font-size: larger;
+        color: black;
+    }
+    img {
+        height: 70%;
+        margin-top: 10%;
+    }
+    .details{
+        .title {
+            font-size: 27px;
+        }
+        .quantity {
+            width: 100%;
+        }
+        .label {
+            font-weight: 600;
+        }
+    }
+}
